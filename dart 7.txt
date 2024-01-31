@@ -1,0 +1,789 @@
+        A - 1
+1)
+import 'dart:io';
+void main() {
+  print('Enter a');
+  var a = int.parse(stdin.readLineSync()!);
+  print('Enter b');
+  var b = int.parse(stdin.readLineSync()!);
+  int c = a + b;
+  print('$c');
+}
+
+
+
+
+
+2)
+import 'dart:io';
+void main() {
+  print('Enter r');
+  int r = int.parse(stdin.readLineSync()!);
+  double c = 3.14 * r * r;
+  print('$c');
+}
+
+
+
+
+3)
+import 'dart:io';
+void main() {
+  print('Enter l');
+  int l = int.parse(stdin.readLineSync()!);
+  print('Enter b');
+  int b = int.parse(stdin.readLineSync()!);
+  print('Enter h');
+  int h = int.parse(stdin.readLineSync()!);
+  int c = l * b * h;
+  print('$c');
+}
+
+
+
+
+
+4)
+import 'dart:io';
+void main() {
+  print('Enter p');
+  int p = int.parse(stdin.readLineSync()!);
+  print('Enter r');
+  double r = int.parse(stdin.readLineSync()!);
+  print('Enter t');
+  int t = int.parse(stdin.readLineSync()!);
+  double c = p*r*t;
+  double d = c/100;
+  print('$d');
+}
+
+
+
+
+
+5)
+import 'dart:io';
+void main() {
+  print('Enter l');
+  int l = int.parse(stdin.readLineSync()!);
+  print('Enter b');
+  int b = int.parse(stdin.readLineSync()!);
+  int c = l * b;
+  print('$c');
+}
+
+
+
+
+
+
+6)
+import 'dart:io';
+void main() {
+  print('Enter a');
+  int a = int.parse(stdin.readLineSync()!);
+  print('Enter b');
+  int b = int.parse(stdin.readLineSync()!);
+  print('Enter c');
+  int c = int.parse(stdin.readLineSync()!);
+  double d = (a+b+c)/3;
+  print('$d');
+}
+
+
+
+
+
+7)
+import 'dart:io';
+void main() {
+  print('Enter a');
+  int a = int.parse(stdin.readLineSync()!);
+  int d = a * a;
+ print('$d');
+}
+
+
+
+
+
+     A - 2
+2)
+import 'dart:io';
+void main() {
+  print("enter a");
+  int a = int.parse(stdin.readLineSync()!);
+  print(a%10);
+}
+
+
+
+
+
+
+3)
+import 'dart:io';
+void main() {
+  print('enter a number');
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(a.toString()[0]);
+  print(b);
+}
+
+
+
+
+
+4)
+import 'dart:io';
+void main() {
+  print('enter a number');
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(a.toString()[1]);
+  print(b);
+}
+
+
+
+
+
+
+5)
+import 'dart:io';
+main() {
+  stdout.write("Enter a");
+  int a = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter b");
+  int b = int.parse(stdin.readLineSync()!);
+  int c = a;
+  a = b;
+  b = c;
+  print(a);
+  print(b);
+}
+
+
+
+
+
+
+6)
+import 'dart:io';
+main() {
+  stdout.write("Enter a");
+  int a = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter b");
+  int b = int.parse(stdin.readLineSync()!);
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  print(a);
+  print(b);
+}
+
+
+
+
+
+8)
+import 'dart:io';
+void main() {
+  print("enter a");
+  int a = int.parse(stdin.readLineSync()!);
+  print("enter b");
+  int b = int.parse(stdin.readLineSync()!);
+  print("$a$b");
+}
+
+
+
+
+
+9)
+import 'dart:io';
+void main() {
+  print('enter a amount in INR:');
+  double a = double.parse(stdin.readLineSync()!);
+  print(a * 76.23);
+}
+
+
+
+    A - 3
+5)
+import 'dart:io';
+void main() {
+  print("Enter three numbers:");
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(stdin.readLineSync()!);
+  int c = int.parse(stdin.readLineSync()!);
+  if (a > b && a > c) {
+    print("$a is greater");
+  } else if (b > a && b > c) {
+    print("$b is greater");
+  } else if (c > a && c > b) {
+    print("$c is greater");
+  } else {
+    print("identical");
+  }
+}
+
+
+
+
+
+6)
+import 'dart:io';
+main() {
+  print("Enter a string : ");
+  var str = stdin.readLineSync();
+  if (str?.toUpperCase() == str) {
+    print("The character is uppercase");
+  } else {
+    print("The character is lowercase");
+  }
+}
+
+
+
+
+
+7)
+import 'dart:io';
+void main() {
+  print("enter three sides value:");
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(stdin.readLineSync()!);
+  int c = int.parse(stdin.readLineSync()!);
+  if(a+b>c && b+c>a && c+a>b){
+    print("triangle is valid");
+  }
+  else{
+    print("triangle is not valid");
+  }
+}
+
+
+
+
+
+8)
+import 'dart:io';
+void main() {
+  stdout.write('enter the month: ');
+  int x = int.parse(stdin.readLineSync()!);
+  if (x < 8) {
+    if (x == 2) {
+      print('month $x total 28 or 29 days');
+    } else if (x % 2 == 0) {
+      print('$x month is 30 days');
+    } else {
+      print("$x month is 31 days");
+    }
+  } else if (x <= 12) {
+    if (x == 8) {
+      print('month $x total 31 days');
+    } else if (x % 2 == 1) {
+      print('$x month is 30 days');
+    } else {
+      print("$x month is 31 days");
+    }
+  }
+}
+
+
+
+
+
+
+
+9)
+import 'dart:io';
+void main() {
+  print('enter the x value:');
+  int x = int.parse(stdin.readLineSync()!);
+  print('enter the a value:');
+  int a = int.parse(stdin.readLineSync()!);
+  print('enter the b value:');
+  int b = int.parse(stdin.readLineSync()!);
+  print('enter the c value:');
+  int c = int.parse(stdin.readLineSync()!);
+  int D = (b * b) - (4 * a * c);
+  if (D == 0) {
+    print("roots are real and equal");
+  } else if (D > 0) {
+    print("roots are real and unequal");
+  } else if (D < 0) {
+    print("roots are imaginary and unequal");
+  }
+}
+
+
+
+
+
+
+10)
+import 'dart:io';
+void main() {
+  print("Enter five subject marks:");
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(stdin.readLineSync()!);
+  int c = int.parse(stdin.readLineSync()!);
+  int d = int.parse(stdin.readLineSync()!);
+  int e = int.parse(stdin.readLineSync()!);
+  int f = a+b+c+d+e;
+  double g = (f/500)*100;
+  if(g>=90){
+    print("Grade A,$g");
+  }
+  else if(g>=80){
+    print("Grade B,$g");
+  }
+  else if(g>=70){
+    print("Grade C,$g");
+  }
+  else if(g>=60){
+    print("Grade D,$g");
+  }
+  else if(g>=40){
+    print("Grade E,$g");
+  }
+  else {
+    print("Grade F,$g");
+  }
+}
+
+
+
+       OR
+
+
+10)
+import 'dart:io';
+void main() {
+  print("Enter Physics marks:");
+  int a = int.parse(stdin.readLineSync()!);
+  print("Enter Chemistry marks:");
+  int b = int.parse(stdin.readLineSync()!);
+  print("Enter Biology marks:");
+  int c = int.parse(stdin.readLineSync()!);
+  print("Enter Mathematics marks:");
+  int d = int.parse(stdin.readLineSync()!);
+  print("Enter Computer marks:");
+  int e = int.parse(stdin.readLineSync()!);
+  int f = a+b+c+d+e;
+  double g = (f/500)*100;
+  if(g>=90){
+    print("Grade A,$g");
+  }
+  else if(g>=80){
+    print("Grade B,$g");
+  }
+  else if(g>=70){
+    print("Grade C,$g");
+  }
+  else if(g>=60){
+    print("Grade D,$g");
+  }
+  else if(g>=40){
+    print("Grade E,$g");
+  }
+  else {
+    print("Grade F,$g");
+  }
+}
+
+
+
+
+
+   A - 4
+1)
+import 'dart:io';
+void main() {
+  print("enter n:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= n; i++) {
+    print("$i,I am a flutter developer");
+  }
+}
+
+
+
+
+    OR
+
+
+1)
+import 'dart:io';
+void main() {
+  print("enter n:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= n; i++) {
+    print("$i,Flutter is Awesome");
+  }
+}
+
+
+
+      or
+
+
+
+1)
+import 'dart:io';
+void main()
+{
+  int i = 1;
+  print('enter value to n');
+  int n = int.parse(stdin.readLineSync()!);
+  while (i <= n)
+  {
+    print("Flutter is Awesome");
+    i++;
+  }
+}
+
+
+
+
+
+2)
+import 'dart:io';
+void main() {
+  print("enter value:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= n; i++) {
+    print("$i");
+  }
+}
+
+
+
+
+    OR
+
+
+
+2)
+import 'dart:io';
+void main()
+{
+  int i = 1;
+  print('enter value to n');
+  int n = int.parse(stdin.readLineSync()!);
+  while (i <= n)
+  {
+    print( i);
+    i++;
+  }
+}
+
+
+
+
+
+
+3)
+import 'dart:io';
+void main() {
+  print("enter value:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = n; i >= 1; i--) {
+    print("$i");
+  }
+}
+
+
+
+      or
+
+
+3)
+import 'dart:io';
+void main()
+{
+  print('enter value to n');
+  int n = int.parse(stdin.readLineSync()!);
+  int i = n;
+  while (i >= 1)
+  {
+    print("$i");
+    i--;
+  }
+}
+
+
+
+
+
+4)
+import 'dart:io';
+void main() {
+  print("enter value:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= n; i++) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+}
+
+
+
+
+
+5)
+import 'dart:io';
+void main() {
+  print("enter value:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = n; i >= 1; i--) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+}
+
+
+
+
+6)
+import 'dart:io';
+void main() {
+  print("enter value:");
+  int n = int.parse(stdin.readLineSync()!);
+  for (int i = 1; i <= n; i = i + 2) {
+    print(i);
+  }
+}
+
+
+     OR
+
+
+6)
+import 'dart:io';
+void main()
+{
+  int i = 1;
+  print('enter value to n');
+  int n = int.parse(stdin.readLineSync()!);
+  while (i <= n)
+  {
+    print( i);
+    i+=2;
+  }
+}
+
+
+
+
+7)
+import 'dart:io';
+void main() {
+  print('Enter n');
+  var n = int.parse(stdin.readLineSync()!);
+  for (var i = 1; i <= n; i++) {
+    int a = i * i;
+    print('$a');
+  }
+}
+
+
+
+
+
+8)
+import 'dart:io';
+void main() {
+  print('Enter n');
+  var n = int.parse(stdin.readLineSync()!);
+  for (var i = 1; i <= n; i++) {
+    int a = i * i * i;
+    print('$a');
+  }
+}
+
+
+
+
+9)
+import 'dart:io';
+void main() {
+  print('Enter n');
+  var n = int.parse(stdin.readLineSync()!);
+  for (var i = n; i >= 1; i--) {
+    int a = i * i;
+    print('$a');
+  }
+}
+
+
+
+
+10)
+import 'dart:io';
+void main() {
+  print('Enter n');
+  var n = int.parse(stdin.readLineSync()!);
+  for (var i = n; i >= 1; i--) {
+    int a = i * i * i;
+    print('$a');
+  }
+}
+
+
+
+
+
+*)
+void main() {
+    var myString = 'apple';
+    if (myString.length > 0) {
+      var output = myString[0];
+      print('First character : $output');
+    } else {
+      print('Empty string, please check.');
+    }
+}
+
+
+
+
+
+       * TABLE OF A NUMBER *
+import 'dart:io';
+void main(){
+  print("enter n:");
+  int n = int.parse(stdin.readLineSync()!);
+print('enter a:');
+  int a = int.parse(stdin.readLineSync()!);
+  for(int i=1;i<=n;i++){
+    print("$a * $i = ${a*i}");
+  }
+}
+
+
+
+
+
+    *factorial*
+import 'dart:io';
+void main() {
+  print("enter n:");
+  int n = int.parse(stdin.readLineSync()!);
+  print(factorial(n));
+}
+factorial(n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return (n * factorial(n - 1));
+  }
+}
+
+
+
+
+ *simple interest*
+import 'dart:io';
+
+void calculateInterest(double principal, double rate, double time) {
+  double interest = (principal * rate * time) / 100;
+  print("Simple interest is $interest");
+}
+
+void main() {
+  print('Enter numbers:');
+  double principal = double.parse(stdin.readLineSync()!);
+  double time  = double.parse(stdin.readLineSync()!);
+  double rate = double.parse(stdin.readLineSync()!);
+  calculateInterest(principal, rate, time);
+}
+
+
+
+
+  *area of circle*
+import 'dart:io';
+double circle(double r) {
+  double A;
+  A = 3.14 * r * r;
+  return (A);
+}
+void main() {
+  print("enter n:");
+  double n = double.parse(stdin.readLineSync()!);
+double  x = circle(n);
+  print("area of circle is $x");
+}
+
+
+
+
+
+*even or odd*
+import 'dart:io';
+void main(){
+  print("enter n:");
+  int n = int.parse(stdin.readLineSync()!);
+  print(number(n));
+}
+int number(int n){
+  if(n%2==0){
+   print("given number is even");
+    return 0;
+  }
+  else
+    {
+      print("given number is odd");
+      return 1;
+    }
+}
+
+
+
+
+*lcm*
+import 'dart:io';
+void main() {
+  print("Enter two positive integers: ");
+  int n1 = int.parse(stdin.readLineSync()!);
+  int n2 = int.parse(stdin.readLineSync()!);
+  int max = (n1 > n2) ? n1 : n2;
+  while (true) {
+    if ((max % n1 == 0) && (max % n2 == 0)) {
+      print("LCM of $n1 and $n2 is: $max");
+      break;
+    }
+    ++max;
+  }
+}
+
+
+    or
+
+
+import 'dart:io';
+void main()
+{
+  print("enter two numbers:");
+  int a = int.parse(stdin.readLineSync()!);
+  int b = int.parse(stdin.readLineSync()!);
+  print("lcm of $a and $b is: ${lcm(a, b)}");
+}
+ int gcd(int a, int b)
+  {
+    if (a == 0)
+      return b;
+    return gcd(b % a, a);
+  }
+  double lcm(int a, int b)
+  {
+    return (a / gcd(a, b)) * b;
+  }
+
+
+

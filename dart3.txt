@@ -1,0 +1,1920 @@
+         *increment*
+ import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked "final".
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Invoke "debug painting" (press "p" in the console, choose the
+          // "Toggle Debug Paint" action from the Flutter Inspector in Android
+          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+          // to see the wireframe for each widget.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            *login*
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: _LoginDemo(),
+    );
+  }
+}
+
+class _LoginDemo extends StatefulWidget {
+
+
+  @override
+  _LoginDemoState createState() => _LoginDemoState();
+}
+
+class _LoginDemoState extends State<_LoginDemo> {
+  get onPressed => null;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: const Text("Login Page"),
+        ),
+        body: SingleChildScrollView(
+        child: Column(
+        children: <Widget>[
+        Padding(
+        padding: const EdgeInsets.only(top: 60.0),
+    child: Center(
+    child: SizedBox(
+    width: 200,
+    height: 150,
+    /*decoration: BoxDecoration(
+color: Colors.red,
+                        borderRadius: BorderRadius.circular(50.0)),*/
+    child: Image.asset('asset/images/flutter-logo.png')),
+    ),
+    ),
+    const Padding(
+    //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+    padding: EdgeInsets.symmetric(horizontal: 15),
+    child: TextField(
+    decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    labelText: 'Email',
+    hintText: 'Enter valid email id as abc@gmail.com'),
+    ),
+    ),
+     const Padding(
+    padding: EdgeInsets.only(
+    left: 15.0, right: 15.0, top: 15, bottom: 0),
+    //padding: EdgeInsets.symmetric(horizontal: 15),
+    child: TextField(
+
+    obscureText: true,
+    decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    labelText: 'Password',
+    hintText: 'Enter secure password'),
+    ),
+    ),
+      (
+    onPressed: () {    },
+      //TO DO FORGOT PASSWORD SCREEN GOES HERE
+
+    child: const Text(
+    'Forgot Password',
+    style: TextStyle(color: Colors.blue, fontSize: 15),),
+    ),
+    Container(
+    height: 50,
+    width: 250,
+    decoration: BoxDecoration(
+    color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+    child: (
+    onPressed: () {
+      Navigator.push(
+    context, MaterialPageRoute(builder: (_) => _LoginDemo()));
+    },
+    child: Text(
+    'Login',
+    style: TextStyle(color: Colors.white, fontSize: 25),
+    ),
+    ),
+    ),
+    const SizedBox (
+    height: 130,
+    ),
+    const Text('New User? Create Account')
+        ],
+        ),
+        ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           *hello world*
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: _MyWidget(),
+        ),
+
+      ),
+    );
+  }
+}
+
+class _MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'Hello, World!',
+      style: Theme.of(context).textTheme.headline4,
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          ***login page workig***
+import 'package:flutter/material.dart';
+void main() => runApp(const MyApp());
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  static const String _title = 'sample';
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(_title)),
+        body: const MyStatefulWidget(),
+      ),
+    );
+  }
+}
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: ListView(
+          children: <Widget>[
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'Details to login',
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30),
+                )
+            ),
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'Sign in',
+                  style: TextStyle(fontSize: 30),
+                )
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextFeild (
+                controller: nameController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'User Name',
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child: TextFeild (
+                obscureText: true,
+                controller: passwordController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password',
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Forgot Password'),
+            ),
+            Container(
+                height: 50,
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: ElevatedButton(
+                  child: const Text('Login'),
+                  onPressed: () {
+
+                  },
+                )
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text('Does have account.'),
+                TextButton(
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {},
+                )
+              ],
+            ),
+          ],
+        )
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       **login**
+import 'package:flutter/material.dart';
+ 
+void main() => runApp(const MyApp());
+ 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+ 
+  static const String _title = 'Sample App';
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(_title)),
+        body: const MyStatefulWidget(),
+      ),
+    );
+  }
+}
+ 
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+ 
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+ 
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: ListView(
+          children: <Widget>[
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'TutorialKart',
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30),
+                )),
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'Sign in',
+                  style: TextStyle(fontSize: 20),
+                )),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                controller: nameController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'User Name',
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child: TextField(
+                obscureText: true,
+                controller: passwordController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password',
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                //forgot password screen
+              },
+              child: const Text('Forgot Password',),
+            ),
+            Container(
+                height: 50,
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: ElevatedButton(
+                  child: const Text('Login'),
+                  onPressed: () {
+                    print(nameController.text);
+                    print(passwordController.text);
+                  },
+                )
+            ),
+            Row(
+              children: <Widget>[
+                const Text('Does not have account?'),
+                TextButton(
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {
+                    //signup screen
+                  },
+                )
+              ],
+              mainAxisAlignment: MainAxisAlignment.center,
+            ),
+          ],
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           ***immunization***
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  // ignore: non_constant_identifier_names
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('immunization vaccation'),
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+        ),
+        bottomNavigationBar: Row(children: const [
+          Material(
+            color: Color.fromARGB(255, 21, 148, 246),
+            child: SizedBox(
+              height: kToolbarHeight,
+              width: 100,
+              child: Center(
+                child: Text(
+                  '                 Self',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Material(
+              color: Color.fromARGB(255, 21, 148, 246),
+              child: SizedBox(
+                height: kToolbarHeight,
+                width: 100,
+                child: Center(
+                  child: Text(
+                    '                  Family',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ]));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         ***immunization vaccination view project***
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            bottomNavigationBar: Row(children: [
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Container(
+                  height: 50,
+                  margin: const EdgeInsets.only(
+                    right: 5,
+                  ),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.lightBlueAccent,
+                  ),
+                  child: const Text(
+                    'Self',
+                    style: TextStyle(fontSize: 17),
+                  ),
+                ),
+              ),
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Container(
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.lightBlueAccent,
+                  ),
+                  child: const Text(
+                    'Family',
+                    style: TextStyle(fontSize: 17),
+                  ),
+                ),
+              )
+            ]),
+            appBar: AppBar(
+              title: const Text('immunization vaccination'),
+              foregroundColor: Colors.black,
+              backgroundColor: Colors.white,
+            ),
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Center(
+                    child: Container(
+                  margin: const EdgeInsets.only(top: 20, right: 160),
+                  height: 50,
+                  width: 190,
+                  alignment: Alignment.centerRight,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Colors.blue, width: 1),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  ),
+                  child: (const Icon(
+                    Icons.search,
+                    size: 30,
+                    color: Colors.blue,
+                  )),
+                )),
+                Card(
+                  elevation: 10,
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                    height: 150,
+                    width: 400,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const Text(" Date : "
+                                  "22/12/2022"),
+                              Container(
+                                height: 40,
+                                width: 40,
+                                decoration: const BoxDecoration(
+                                  color: Colors.lightBlueAccent,
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(10),
+                                      bottomLeft: Radius.circular(10)),
+                                ),
+                                child: const Icon(
+                                  Icons.visibility,
+                                  size: 30,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ]),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          margin: const EdgeInsets.only(left: 10),
+                          child: const Text("Vaccine name will be here",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 17)),
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(
+                            right: 20,
+                          ),
+                          alignment: Alignment.bottomRight,
+                          child: const Text(
+                            "Done",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.green,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  elevation: 10,
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                    height: 150,
+                    width: 400,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const Text("Date : 22/12/2022"),
+                              Container(
+                                height: 40,
+                                width: 40,
+                                decoration: const BoxDecoration(
+                                  color: Colors.lightBlueAccent,
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(10),
+                                      bottomLeft: Radius.circular(10)),
+                                ),
+                                child: const Icon(
+                                  Icons.add,
+                                  size: 30,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ]),
+                        const SizedBox(
+                          height: 1,
+                        ),
+                        Expanded(
+                          child: Container(
+                            alignment: Alignment.bottomLeft,
+                            margin: const EdgeInsets.only(top: 5, left: 10),
+                            child: const Text(
+                              'Vaccine name will be here',
+                              style: TextStyle(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 1,
+                        ),
+                        Flexible(
+                            child: Container(
+                          alignment: Alignment.bottomLeft,
+                          margin: const EdgeInsets.only(left: 10),
+                          child: const Text(
+                            'if name will long',
+                            style: TextStyle(
+                                fontSize: 17, fontWeight: FontWeight.bold),
+                          ),
+                        )),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(
+                            right: 20,
+                            bottom: 10,
+                          ),
+                          alignment: Alignment.bottomRight,
+                          child: const Text(
+                            "Pending",
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 15,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )));
+  }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      **view 2**
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            bottomNavigationBar: Row(children: [
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Container(
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(
+                    color: Colors.lightBlueAccent,
+                  ),
+                  child: const Text(
+                    'Submit',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+            appBar: AppBar(
+              title: const Text('Add immunization'),
+              foregroundColor: Colors.black,
+              backgroundColor: Colors.white,
+              actions: [
+                IconButton(
+                  icon: const Icon(
+                    Icons.close,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {},
+                )
+              ],
+            ),
+            body: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Center(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      margin: const EdgeInsets.only(left: 30, top: 20),
+                      child: const Text("Enter Vaccine Name",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17)),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10, right: 20, left: 20),
+                    height: 50,
+                    width: 300,
+                    alignment: Alignment.centerLeft,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      border: Border.all(color: Colors.black38, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: const Text(
+                      "Gayatri",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    margin: const EdgeInsets.only(left: 30, top: 20),
+                    child: const Text("Date Of Immunization",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 17)),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10, right: 20, left: 20),
+                    height: 50,
+                    width: 300,
+                    alignment: Alignment.centerLeft,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.black45, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text("03/01/2023"),
+                                Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                    ),
+                                    child: const Icon(
+                                      Icons.calendar_today_rounded,
+                                      size: 25,
+                                      color: Colors.black,
+                                    )),
+                              ]),
+                        ]),
+                  ),
+                  Container(
+                      height: 100,
+                      width: 100,
+                      alignment: Alignment.center,
+                      child: const Icon(
+                        Icons.info_outline,
+                      )),
+                  Container(
+                    height: 25,
+                    width: 60,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'At birth oras early as possible within the first 15days',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    ),
+                  ),
+                  Container(
+                    height: 20,
+                    width: 30,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Route: Oral',
+                      style: TextStyle(fontSize: 13, color: Colors.grey),
+                    ),
+                  ),
+                  Container(
+                    height: 20,
+                    width: 30,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Site: Oral',
+                      style: TextStyle(fontSize: 13, color: Colors.grey),
+                    ),
+                  ),
+                  Container(
+                    height: 20,
+                    width: 30,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Dose: 2 drops',
+                      style: TextStyle(fontSize: 13, color: Colors.grey),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.all(30),
+                    height: 10,
+                    width: 30,
+                    alignment: Alignment.topCenter,
+                    child: const Icon(
+                      Icons.cloud_upload_outlined,
+                      size: 50,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    width: 30,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Upload you Priscription',
+                      style: TextStyle(fontSize: 18, color: Colors.grey),
+                    ),
+                  ),
+                  Container(
+                    height: 20,
+                    width: 30,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'JPG, PNG or PDF, file size no more than 1MB',
+                      style: TextStyle(fontSize: 17, color: Colors.black45),
+                    ),
+                  ),
+                ])));
+  }
+}
+
+
+
+
+     or
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            bottomNavigationBar: Row(children: [
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Container(
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(
+                    color: Color(0xff71B5DA),
+                  ),
+                  child: const Text(
+                    'Submit',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+            appBar: AppBar(
+              title: const Text('Add immunization'),
+              foregroundColor: Colors.black,
+              backgroundColor: Colors.white,
+              actions: [
+                IconButton(
+                  icon: const Icon(
+                    Icons.close,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {},
+                )
+              ],
+            ),
+            body: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Center(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      margin: const EdgeInsets.only(left: 30, top: 20),
+                      child: const Text("Enter Vaccine Name",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17)),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10, right: 20, left: 20),
+                    height: 50,
+                    width: 300,
+                    padding: const EdgeInsets.only(left: 20),
+                    alignment: Alignment.centerLeft,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      border: Border.all(color: Colors.black38, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: const Text(
+                      "Gayatri",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    margin: const EdgeInsets.only(left: 30, top: 20),
+                    child: const Text("Date Of Immunization",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 17)),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 10, right: 20, left: 20),
+                    height: 50,
+                    width: 300,
+                    padding: const EdgeInsets.only(left: 20),
+                    alignment: Alignment.centerLeft,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.black45, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text("03/01/2023"),
+                                Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                    ),
+                                    child: const Icon(
+                                      Icons.calendar_today_rounded,
+                                      size: 25,
+                                      color: Colors.black,
+                                    )),
+                              ]),
+                        ]),
+                  ),
+                  Container(
+                      height: 100,
+                      width: 60,
+                      alignment: Alignment.center,
+                      child: const Icon(
+                        Icons.info_outline,
+                      )),
+                  Container(
+                    height: 30,
+                    width: 60,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'At birth oras early as possible within the first 15days',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    ),
+                  ),
+                  Container(
+                      margin: const EdgeInsets.only(left: 160),
+                      height: 20,
+                      width: 30,
+                      child: Row(children: const [
+                        Text(
+                          'Route: ',
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
+                        Text("Oral",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xffC71B5DA),
+                            ))
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(left: 160),
+                      height: 20,
+                      width: 30,
+                      child: Row(children: const [
+                        Text(
+                          'Site: ',
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
+                        Text("Oral",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xffC71B5DA),
+                            ))
+                      ])),
+                  Container(
+                      margin: const EdgeInsets.only(left: 160),
+                      height: 20,
+                      width: 30,
+                      child: Row(children: const [
+                        Text(
+                          'Doses: ',
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
+                        Text("2 drops",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xffC71B5DA),
+                            ))
+                      ])),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                      margin:
+                          const EdgeInsets.only(left: 30, right: 30, top: 20),
+                      height: 216,
+                      width: 313,
+                      child: DottedBorder(
+                          color: const Color(0xff635B5B),
+                          borderType: BorderType.RRect,
+                          radius: const Radius.circular(15),
+                          dashPattern: const [10, 5, 10, 5, 10, 5],
+                          child: Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.all(10),
+                                height: 20,
+                                width: 30,
+                                alignment: Alignment.topCenter,
+                                child: const Icon(
+                                  Icons.cloud_upload_outlined,
+                                  size: 50,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                height: 50,
+                                width: 350,
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  'Upload you Priscription',
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.grey),
+                                ),
+                              ),
+                              Container(
+                                height: 30,
+                                width: 350,
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  'JPG, PNG or PDF, file size no more than 1MB',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black45),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                margin: const EdgeInsets.all(10),
+                                height: 26,
+                                width: 68,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color:Colors.white,
+                                  border: Border.all(
+                                      color: Color(0xffC71B5DA), width: 1),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(10)),
+                                ),
+                                child: const Text(
+                                  "SELECT FILE",
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0xffC71B5DA),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ))),
+                ])));
+  }
+}
+
+
+

@@ -1,0 +1,112 @@
+// Future<void> getCommunicationFilteredVoter() async {
+  //   if (constituency.controller.text.isNotEmpty &&
+  //       mandal.controller.text.isNotEmpty &&
+  //       pollingstationnames.controller.text.isNotEmpty &&
+  //       gender.value.isNotEmpty) {
+  //     LoadingUtils.showLoader();
+  //     RepoResponse<GenericResponse> response =
+  //     await repository.getCommunicationFilteredVoterData(
+  //       constituency: constituency.controller.text,
+  //       gender: gender.value.toUpperCase(),
+  //       home: house_no.controller.text.isNotEmpty
+  //           ? house_no.controller.text
+  //           : 'null',
+  //       lastName: lastname.controller.text.isNotEmpty
+  //           ? lastname.controller.text
+  //           : 'null',
+  //       mandal: mandal.controller.text,
+  //       name: name.controller.text.isNotEmpty ? name.controller.text : 'null',
+  //       pollingStationName: pollingstationnames.controller.text,
+  //       sectionName: sectionnameandnumber.controller.text.isNotEmpty
+  //           ? sectionnameandnumber.controller.text
+  //           : 'null',
+  //       voterId: 'null',
+  //     );
+  //     LoadingUtils.hideLoader();
+  //     if (response.data?.status == 200 || response.data?.status == 201) {
+  //       var voterData = response.data?.result.toString();
+  //       Get.toNamed(Routes.COMMUNICATION_SEARCH_VIEW);
+  //       voterDataCount.value=voterData ?? '';
+  //       print("coming ${voterData}");
+  //     } else {
+  //       AppUtils.showSnackBar(
+  //           response.error?.message ?? 'something went wrong');
+  //     }
+  //   } else {
+  //     if (LoadingUtils.isLoaderShowing) LoadingUtils.hideLoader();
+  //     AppUtils.showSnackBar('Please fill details');
+  //   }
+  // }
+
+
+
+
+
+
+
+
+
+
+
+ if (response.data?.status == 200 || response.data?.status == 201) {
+        var voterData = response.data?.result.toString();
+        var ivinidsdata = response.data?.ivinids.toString();
+        Get.toNamed(Routes.COMMUNICATION_SEARCH_VIEW);
+
+        voterDataCount.value = voterData ?? '';
+        ivinIdsDataCount.value = ivinidsdata ?? '';
+        print("coming ${voterData}");
+        print("oihgv ${ivinidsdata}");
+      }
+
+
+
+
+
+
+
+
+
+  Future<void> getCommunicationFilteredVoter() async {
+    if (constituency.controller.text.isNotEmpty &&
+        mandal.controller.text.isNotEmpty &&
+        pollingstationnames.controller.text.isNotEmpty &&
+        gender.value.isNotEmpty) {
+      LoadingUtils.showLoader();
+      RepoResponse<GenericResponse> response =
+          await repository.getCommunicationFilteredVoterData(
+        constituency: constituency.controller.text,
+        gender: gender.value.toUpperCase(),
+        home: house_no.controller.text.isNotEmpty
+            ? house_no.controller.text
+            : 'null',
+        lastName: lastname.controller.text.isNotEmpty
+            ? lastname.controller.text
+            : 'null',
+        mandal: mandal.controller.text,
+        name: name.controller.text.isNotEmpty ? name.controller.text : 'null',
+        pollingStationName: pollingstationnames.controller.text,
+        sectionName: sectionnameandnumber.controller.text.isNotEmpty
+            ? sectionnameandnumber.controller.text
+            : 'null',
+        voterId: 'null',
+      );
+      LoadingUtils.hideLoader();
+      if (response.data?.status == 200 || response.data?.status == 201) {
+        CommunicationResponse communicationResponse =
+            CommunicationResponse.fromJson(response.data?.result);
+
+        voterDataCount.value = communicationResponse.count ?? 0;
+        ivinIds.value = communicationResponse.ivinIds?.length as List<String>;
+
+        print(voterDataCount.value);
+        print(ivinIds.length);
+      } else {
+        AppUtils.showSnackBar(
+            response.error?.message ?? 'something went wrong');
+      }
+    } else {
+      if (LoadingUtils.isLoaderShowing) LoadingUtils.hideLoader();
+      AppUtils.showSnackBar('Please fill details');
+    }
+  }

@@ -1,0 +1,804 @@
+ // Padding(
+                            //   padding: EdgeInsets.only(left: Dimens.gapX3),
+                            //   child: Row(
+                            //     mainAxisAlignment: MainAxisAlignment.start,
+                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //     children: [
+                            //       Obx(() => CommonRadioButton(
+                            //             text: "Yes",
+                            //             style: AppStyles.tsBlackSemi16,
+                            //             value: "Yes",
+                            //             groupValue: controller
+                            //                 .rightEyeVisuallyChallengedNo.value,
+                            //             onChanged: (value) {
+                            //               controller
+                            //                   .onChangeRightEyeVisuallyChallengedNo(
+                            //                       value ?? "No");
+                            //             },
+                            //           )),
+                            //       SizedBox(
+                            //         width: Dimens.gapX2,
+                            //       ),
+                            //       Obx(() => CommonRadioButton(
+                            //             text: "No",
+                            //             style: AppStyles.tsBlackSemi16,
+                            //             value: "No",
+                            //             groupValue: controller
+                            //                 .rightEyeVisuallyChallengedNo.value,
+                            //             onChanged: (value) {
+                            //               controller
+                            //                   .onChangeRightEyeVisuallyChallengedNo(
+                            //                       value ?? "No");
+                            //             },
+                            //           )),
+                            //     ],
+                            //   ),
+                            // ),
+                            // Center(
+                            //     child: Container(
+                            //   width: Dimens.screenWidthX14,
+                            //   height: 2.0,
+                            //   color: AppColors.greyColor,
+                            // )),
+                            // Row(
+                            //     mainAxisAlignment:
+                            //         MainAxisAlignment.spaceEvenly,
+                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //     children: [
+                            //       Column(
+                            //           mainAxisAlignment:
+                            //               MainAxisAlignment.start,
+                            //           crossAxisAlignment:
+                            //               CrossAxisAlignment.start,
+                            //           children: [
+                            //             Obx(() => CommonRadioButton(
+                            //                   text: "Cataract",
+                            //                   style: AppStyles.tsBlackSemi16,
+                            //                   value: "Cataract",
+                            //                   groupValue:
+                            //                       controller.cataract.value,
+                            //                   onChanged: (value) {
+                            //                     controller.onChangeCataract(
+                            //                         value ?? "Cataract");
+                            //                   },
+                            //                 )),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Counting Fingers",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Counting Fingers",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Hand Motion",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Hand Motion",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "No Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "No Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     )))
+                            //           ]),
+                            //       Column(
+                            //           mainAxisAlignment:
+                            //               MainAxisAlignment.start,
+                            //           crossAxisAlignment:
+                            //               CrossAxisAlignment.start,
+                            //           children: [
+                            //             Obx(() => CommonRadioButton(
+                            //                   text: "Corneal Opacity",
+                            //                   style: AppStyles.tsBlackSemi16,
+                            //                   value: "Corneal Opacity",
+                            //                   groupValue:
+                            //                       controller.cataract.value,
+                            //                   onChanged: (value) {
+                            //                     controller.onChangeCataract(
+                            //                         value ?? "Corneal Opacity");
+                            //                   },
+                            //                 )),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Counting Fingers",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Counting Fingers",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Hand Motion",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Hand Motion",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "No Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "No Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //           ]),
+                            //     ]),
+                            // Row(
+                            //     mainAxisAlignment:
+                            //         MainAxisAlignment.spaceEvenly,
+                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //     children: [
+                            //       Column(
+                            //           mainAxisAlignment:
+                            //               MainAxisAlignment.start,
+                            //           crossAxisAlignment:
+                            //               CrossAxisAlignment.start,
+                            //           children: [
+                            //             Obx(() => CommonRadioButton(
+                            //                   text: "Glaucoma",
+                            //                   style: AppStyles.tsBlackSemi16,
+                            //                   value: "Glaucoma",
+                            //                   groupValue:
+                            //                       controller.cataract.value,
+                            //                   onChanged: (value) {
+                            //                     controller.onChangeCataract(
+                            //                         value ?? "Glaucoma");
+                            //                   },
+                            //                 )),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Counting Fingers",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Counting Fingers",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Hand Motion",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Hand Motion",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "No Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "No Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     )))
+                            //           ]),
+                            //       Column(
+                            //           mainAxisAlignment:
+                            //               MainAxisAlignment.start,
+                            //           crossAxisAlignment:
+                            //               CrossAxisAlignment.start,
+                            //           children: [
+                            //             Obx(() => CommonRadioButton(
+                            //                   text: "Phthisis Bulbi",
+                            //                   style: AppStyles.tsBlackSemi16,
+                            //                   value: "Phthisis Bulbi",
+                            //                   groupValue:
+                            //                       controller.cataract.value,
+                            //                   onChanged: (value) {
+                            //                     controller.onChangeCataract(
+                            //                         value ?? "Phthisis Bulbi");
+                            //                   },
+                            //                 )),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Counting Fingers",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Counting Fingers",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Hand Motion",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Hand Motion",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //             Padding(
+                            //                 padding: EdgeInsets.only(
+                            //                     left: Dimens.gapX2),
+                            //                 child: Obx(() => CommonRadioButton(
+                            //                       text: "No Light Perception",
+                            //                       style:
+                            //                           AppStyles.tsBlackSemi16,
+                            //                       value: "No Light Perception",
+                            //                       groupValue: controller
+                            //                           .countingFingers.value,
+                            //                       onChanged: (value) {
+                            //                         controller
+                            //                             .onChangeCountingFingers(
+                            //                                 value ??
+                            //                                     "Counting Fingers");
+                            //                       },
+                            //                     ))),
+                            //           ]),
+                            //     ]),
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/cupertino.dart';
+// import 'package:get/get.dart';
+//
+// import '../../../../data/values/dimens.dart';
+// import '../../controllers/home_controller.dart';
+// import '../../../../routes/app_routes.dart';
+// import '../../../../../widgets/common_widget_station.dart';
+//
+// class CommonStations extends StatelessWidget {
+//   HomeController controller = Get.find();
+//   CommonStations({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return SingleChildScrollView(
+//       scrollDirection: Axis.horizontal,
+//       child: Row(
+//         children: [
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . A';
+//             return CommonStationWidget(
+//               text: 'STATION . A',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . A');
+//                 Get.toNamed(Routes.HOME);
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . B';
+//             return CommonStationWidget(
+//               text: 'STATION . B',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . B');
+//                 Get.toNamed(Routes.BLOODPRESSURE);
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . C';
+//             return CommonStationWidget(
+//               text: 'STATION . C',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . C');
+//                 Get.toNamed(Routes.PROBLEMSVIEW);
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . D';
+//             return CommonStationWidget(
+//               text: 'STATION . D',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . D');
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . E';
+//             return CommonStationWidget(
+//               text: 'STATION . E',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . E');
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . F';
+//             return CommonStationWidget(
+//               text: 'STATION . F',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . F');
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . G';
+//             return CommonStationWidget(
+//               text: 'STATION . G',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . G');
+//               },
+//               controller: controller,
+//             );
+//           }),
+//           SizedBox(
+//             width: Dimens.gapX0_5,
+//           ),
+//           Obx(() {
+//             final isSelected =
+//                 controller.selectedStation.value == 'STATION . H';
+//             return CommonStationWidget(
+//               text: 'STATION . H',
+//               isSelected: isSelected,
+//               onTap: () {
+//                 controller.selectStation(isSelected ? '' : 'STATION . H');
+//               },
+//               controller: controller,
+//             );
+//           }),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+containers sliding view
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class HorizontalStepperController extends GetxController {
+  final PageController pageController = PageController();
+  final RxInt currentStep = 0.obs;
+
+  final List<Widget> steps = [
+    Container(
+      color: Colors.red,
+      child: Center(child: Text("Step 1")),
+    ),
+    Container(
+      color: Colors.green,
+      child: Center(child: Text("Step 2")),
+    ),
+    Container(
+      color: Colors.blue,
+      child: Center(child: Text("Step 3")),
+    ),
+  ];
+
+  void nextStep() {
+    if (currentStep.value < steps.length - 1) {
+      currentStep.value++;
+      pageController.nextPage(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+    }
+  }
+
+  void previousStep() {
+    if (currentStep.value > 0) {
+      currentStep.value--;
+      pageController.previousPage(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+    }
+  }
+}
+
+class MyApp extends StatelessWidget {
+  final HorizontalStepperController controller =
+  Get.put(HorizontalStepperController());
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Horizontal Stepper with GetX"),
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: PageView(
+                controller: controller.pageController,
+                onPageChanged: (index) {
+                  controller.currentStep.value = index;
+                },
+                children: controller.steps,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                  onPressed: controller.previousStep,
+                  child: Text("Previous"),
+                ),
+                ElevatedButton(
+                  onPressed: controller.nextStep,
+                  child: Text("Next"),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class HorizontalStepperController extends GetxController {
+//   final PageController pageController = PageController();
+//   final RxInt currentStep = 0.obs;
+//
+//   final double containerWidth = 300.0; // Fixed width for the containers
+//   final double containerHeight = 200.0; // Fixed height for the containers
+//
+//   final List<Widget> steps = [
+//     Container(
+//       width: 300.0, // Fixed width
+//       height: 200.0, // Fixed height
+//       color: Colors.red,
+//       child: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(
+//               "Step 1",
+//               style: TextStyle(fontSize: 24, color: Colors.white),
+//             ),
+//             SizedBox(height: 16),
+//             Text(
+//               "This is Step 1",
+//               style: TextStyle(fontSize: 16, color: Colors.white),
+//             ),
+//           ],
+//         ),
+//       ),
+//     ),
+//     Container(
+//       width: 300.0, // Fixed width
+//       height: 200.0, // Fixed height
+//       color: Colors.green,
+//       child: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(
+//               "Step 2",
+//               style: TextStyle(fontSize: 24, color: Colors.white),
+//             ),
+//             SizedBox(height: 16),
+//             Text(
+//               "This is Step 2",
+//               style: TextStyle(fontSize: 16, color: Colors.white),
+//             ),
+//           ],
+//         ),
+//       ),
+//     ),
+//     Container(
+//       width: 300.0, // Fixed width
+//       height: 200.0, // Fixed height
+//       color: Colors.blue,
+//       child: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(
+//               "Step 3",
+//               style: TextStyle(fontSize: 24, color: Colors.white),
+//             ),
+//             SizedBox(height: 16),
+//             Text(
+//               "This is Step 3",
+//               style: TextStyle(fontSize: 16, color: Colors.white),
+//             ),
+//           ],
+//         ),
+//       ),
+//     ),
+//   ];
+//
+//   void nextStep() {
+//     if (currentStep.value < steps.length - 1) {
+//       currentStep.value++;
+//       pageController.nextPage(
+//         duration: Duration(milliseconds: 300),
+//         curve: Curves.ease,
+//       );
+//     }
+//   }
+//
+//   void previousStep() {
+//     if (currentStep.value > 0) {
+//       currentStep.value--;
+//       pageController.previousPage(
+//         duration: Duration(milliseconds: 300),
+//         curve: Curves.ease,
+//       );
+//     }
+//   }
+// }
+//
+// class MyApp extends StatelessWidget {
+//   final HorizontalStepperController controller =
+//   Get.put(HorizontalStepperController());
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("Horizontal Stepper with GetX"),
+//         ),
+//         body: Column(
+//           children: [
+//             Expanded(
+//               child: PageView(
+//                 controller: controller.pageController,
+//                 onPageChanged: (index) {
+//                   controller.currentStep.value = index;
+//                 },
+//                 children: controller.steps,
+//               ),
+//             ),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceAround,
+//               children: [
+//                 ElevatedButton(
+//                   onPressed: controller.previousStep,
+//                   child: Text("Previous"),
+//                 ),
+//                 ElevatedButton(
+//                   onPressed: controller.nextStep,
+//                   child: Text("Next"),
+//                 ),
+//               ],
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

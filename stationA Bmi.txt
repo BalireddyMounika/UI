@@ -1,0 +1,225 @@
+calculation of BMI code for station A
+
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nivish/app/data/values/images.dart';
+import 'package:nivish/app/routes/app_routes.dart';
+import 'package:nivish/app/themes/app_colors.dart';
+import 'package:nivish/app/themes/app_styles.dart';
+import 'package:nivish/widgets/common_appbar.dart';
+import 'package:nivish/widgets/custom_button.dart';
+import '../../../../widgets/common_text.dart';
+import '../../home/controllers/home_controller.dart';
+import '../../home/views/common_station_seletions_widget/Common_station_selections.dart';
+import '../../../../widgets/common_stepper.dart';
+import '../../../data/values/dimens.dart';
+import 'dart:math';
+
+import '../controllers/station_A_controller.dart';
+
+class StationABmiView extends StatelessWidget {
+  HomeController controller = Get.find();
+
+  StationABmiView({Key? key}) : super(key: key);
+  int currentStep = 7;
+  double calculateBMI(double weight, double heightInCM) {
+    double heightInMeters = heightInCM / 100.0;
+
+    double bmi = weight / pow(heightInMeters, 2);
+
+    return bmi;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    String weightValue = controller.weightWrapper.controller.text;
+    String heightValue = controller.heightWrapper.controller.text;
+
+    // Convert the string values to double
+    double weight = double.tryParse(weightValue) ?? 0.0;
+    double heightInCM = double.tryParse(heightValue) ?? 0.0;
+
+    double bmi = calculateBMI(weight, heightInCM);
+    return Scaffold(
+        appBar: CustomAppBar(),
+        body: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CommonStations(),
+              const SizedBox(
+                height: Dimens.gapX5,
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: Dimens.gapX20),
+                child: CustomStepper(
+                  currentStep: currentStep,
+                  onStepChanged: (step) {},
+                  stepNumber: 9,
+                  indexNumber: 8,
+                ),
+              ),
+              const SizedBox(
+                height: Dimens.gapX9,
+              ),
+              Container(
+                // height: Dimens.screenHeightX45,
+                // width: Dimens.screenWidthX14,
+                height: Dimens.screenHeightX600,
+                width: Dimens.screenWidthX740,
+                decoration: const BoxDecoration(
+                    color: AppColors.baseColor,
+                    boxShadow: [
+                      BoxShadow(blurRadius: 15, color: AppColors.greyColor)
+                    ]),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                        padding: EdgeInsets.only(left: Dimens.gapX8),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CommonText(
+                                text: "BMI",
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.only(left: Dimens.gapX10),
+                                  child: CommonText(
+                                    text: "Abdominal Girth to Height",
+                                  )),
+                            ])),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image(
+                          image: const AssetImage(AppImages.calculatedBmi),
+                          width: Dimens.screenWidthXFourth,
+                        ),
+                        Image(
+                          image: const AssetImage(AppImages.calculatedAh),
+                          width: Dimens.screenWidthXFourth,
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          'BMI: ${bmi.toStringAsFixed(2)} kg/m²', // Add "kg/m²" to the display
+                          style: AppStyles.tsBlackSemiBold36,
+                        ),
+                        // Text(
+                        //   "23 Kg/m^2",
+                        //   style: AppStyles.tsBlackSemiBold36,
+                        // ),
+                        Text(
+                          "23 Kg/m",
+                          style: AppStyles.tsBlackSemiBold36,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: Dimens.gapX10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CustomButton(
+                      text: "Previous",
+                      onTap: () {
+                        Get.toNamed(Routes.ABDOMINALGIRTH);
+                      }),
+                  CustomButtons(
+                      text: "Save & Next",
+                      onTap: () {
+                        currentStep++;
+                        Get.toNamed(Routes.OTHEROBSERVATION);
+                      })
+                ],
+              )
+            ]));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+Station C visible view for color blindness
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: Dimens.gapX3, top: Dimens.gapX2),
+                              child: Obx(
+                                    () => Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    CommonRadioButton(
+                                      text: "Color Blindness",
+                                      style: AppStyles.tsBlack24,
+                                      value: "Color Blindness",
+                                      groupValue: controller.colorBlindness.value,
+                                      onChanged: (value) {
+                                        controller.onChangeColorBlindness(value ?? "Color Blindness");
+                                       controller. isColorBlindnessEnabled.value = !controller.isColorBlindnessEnabled.value; // Toggle the enabled state
+                                      },
+                                    ),
+                                    Visibility(
+                                      visible: controller.isColorBlindnessEnabled.value, // Control the visibility based on the enabled state
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: Dimens.gapX8, right: Dimens.gapX11),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Expanded(
+                                              child: CommonRadioButton(
+                                                text: "Total Color\nBlindness",
+                                                style: AppStyles.tsBlackSemi16,
+                                                value: "Total Color Blindness",
+                                                groupValue: controller.totalColorBlindness.value,
+                                                onChanged: (value) {
+                                                  controller.onChangeTotalColorBlindness(value ?? "Color Blindness");
+                                                },
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: CommonRadioButton(
+                                                text: "Red-Green\nPartial",
+                                                style: AppStyles.tsBlackSemi16,
+                                                value: "Red-Green Partial",
+                                                groupValue: controller.totalColorBlindness.value,
+                                                onChanged: (value) {
+                                                  controller.onChangeTotalColorBlindness(value ?? "Color Blindness");
+                                                },
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: CommonRadioButton(
+                                                text: "Blue-Green\nPartial",
+                                                style: AppStyles.tsBlackSemi16,
+                                                value: "Blue-Green Partial",
+                                                groupValue: controller.totalColorBlindness.value,
+                                                onChanged: (value) {
+                                                  controller.onChangeTotalColorBlindness(value ?? "Color Blindness");
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),

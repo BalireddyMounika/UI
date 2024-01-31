@@ -1,0 +1,8 @@
+snackbarservice means
+locator and navigator
+resgistration view lo switch case
+fitted box for what
+model.somename or function calling means
+onbackpressed & onclearpressed
+map
+viewmodel

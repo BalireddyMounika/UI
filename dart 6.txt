@@ -1,0 +1,2960 @@
+          ***figma basics***
+
+1)       * FLUTTER *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            body: Center(
+              child: const Text(
+                'Flutter',
+                style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),
+              ),
+            )));
+  }
+}
+
+
+
+
+
+
+
+
+2)        * LEFTCORNER CONTAINER *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Container(
+          margin: EdgeInsets.only(right: 90, bottom: 50),
+          height: 200,
+          width: 250,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+3)        * CENTER CONTAINER *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+            child: Container(
+             height: 180,
+              width: 250,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+4)        * RIGHT CORNER CONTAINER *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              margin: EdgeInsets.only(top: 450, left: 150, bottom: 180),
+              height: 250,
+              width: 250,
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+
+5)       * LOGIN PAGE *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+            Center(
+                child: Container(
+              margin: EdgeInsets.only(top: 150),
+              alignment: Alignment.center,
+              height: 50,
+              width: 300,
+              child: Text(
+                'Login Form',
+                style: TextStyle(fontSize: 40, color: Colors.lightBlue),
+              ),
+            )),
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20, top: 80),
+              height: 60,
+              width: 100,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.lightBlueAccent),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20, top: 40),
+              height: 60,
+              width: 100,
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.lightBlueAccent),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          Container(
+              margin: EdgeInsets.all(90),
+              height: 60,
+              width: 100,
+              alignment: Alignment.center,
+             decoration: BoxDecoration(
+               color: Colors.blue,
+               border: Border.all(color: Colors.blue),
+               borderRadius: BorderRadius.all(Radius.circular(20)),
+             ),
+              child: Text(
+                "Login",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+            ),
+          ])),
+    );
+  }
+}
+                       
+ 
+
+               OR
+
+
+
+
+5)        *LOGIN PAGE *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+            Center(
+                child: Container(
+              margin: const EdgeInsets.only(top: 150),
+              alignment: Alignment.center,
+              height: 50,
+              width: 300,
+              child: const Text(
+                'Login Form',
+                style: TextStyle(fontSize: 40, color: Colors.lightBlue),
+              ),
+            )),
+            Container(
+              padding: const EdgeInsets.all(30),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Username',
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(30),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password',
+                ),
+              ),
+            ),
+            Container(
+                margin: const EdgeInsets.only(
+                    left: 80, top: 100, right: 80, bottom: 40),
+                height: 50,
+                width: 100,
+                color: Colors.blue,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(fontSize: 25, color: Colors.white),
+                  ),
+                )),
+          ])),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+6)      *TWO CONTAINERS IN COLUMN *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 30, right: 30, top: 180),
+                  height: 180,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.lightBlueAccent),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 30, right: 30, top: 70),
+                  height: 180,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.lightBlueAccent),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+              ])),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+7)    * TWO CONTAINERS IN ROW *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+            Container(
+              margin: EdgeInsets.only(left: 80, top: 380, bottom: 350),
+              height: 50,
+              width: 90,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(color: Colors.lightBlueAccent),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 60, top: 380, bottom: 350),
+              height: 50,
+              width: 90,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(color: Colors.lightBlueAccent),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ])),
+    );
+  }
+}
+
+
+ 
+
+
+
+
+
+8)       * FLUTTER APP *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            body: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+              Container(
+                  margin: const EdgeInsets.only(left: 30, right: 30),
+                  height: 200,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlueAccent,
+                    border: Border.all(color: Colors.lightBlueAccent),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      child: const Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          'Flutter App',
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      child: const Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          'Flutter is an open-source UI software development kit created by Google',
+                          style: TextStyle(
+                            fontSize: 25,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                    ),
+                  ])),
+            ])));
+  }
+}
+
+
+
+
+
+       OR
+     
+
+
+
+8)    * FLUTTER APP *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+            body: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+              Container(
+                  margin: const EdgeInsets.only(left: 30, right: 30),
+                  height: 200,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Colors.lightBlueAccent),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      child: const Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          'Flutter App',
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.lightBlueAccent),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      child: const Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          'Flutter is an open-source UI software development kit created by Google',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                    ),
+                  ])),
+            ])));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+9)   *FLUTTER APP WITH CONTAINER *
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.blue,
+          body: Center(
+            child: Container(
+              height: 200,
+              width: 280,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.all(Radius.circular(18)),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(30.0),
+                    child: const Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Flutter App',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlueAccent),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    height: 60,
+                    width: 230,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+10)    *FLUTTER APP WITH CIRCLE*
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.blue,
+          body: Center(
+            child: Container(
+              height: 280,
+              width: 280,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.all(Radius.circular(18)),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(40.0),
+                    child: const Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Flutter App',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlueAccent),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+              OR
+
+
+
+
+
+
+10)     *FLUTTER APP WITH CIRCLE*
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.blue,
+          body: Center(
+            child: Container(
+              height: 250,
+              width: 280,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.all(Radius.circular(18)),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 90,
+                    width: 100,
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Flutter App',
+                      style: TextStyle(fontSize: 20, color: Colors.blue),
+                    ),
+                  ),
+                  Container(
+                    height: 100,
+                    width: 250,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      shape: BoxShape.circle,
+                      ),
+                    ),
+                  
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+11)  * CONTAINER WITH RIGHT SLANT *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              height: 300,
+              width: 250,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+                boxShadow: [
+                  BoxShadow(blurRadius: 20,
+                      offset: Offset(10.0, 10.0),color: Colors.black45),
+                ],
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(230),
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+12)         * MEDICINE (OPTIONAL) *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent.shade200,
+          body: Column(children: [
+            Container(
+              margin:
+                  const EdgeInsets.only(left: 70.0, top: 250.0, right: 60.0),
+              height: 300,
+              width: 250,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow:  [
+                  BoxShadow(blurRadius: 3),
+                ],
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(210),
+                    bottomLeft: Radius.circular(15),
+                    bottomRight: Radius.circular(15)),
+              ),
+              child: Column(children: const [
+                SizedBox(
+                  height: 110,
+                ),
+                Text(
+                  'Medicine',
+                  style: TextStyle(fontSize: 30, color: Colors.lightBlueAccent),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'We asked several medical students why they choose to study medicine',
+                  style: TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center,
+                )
+              ]),
+            ),
+          ]),
+        ));
+  }
+}
+
+
+
+
+
+
+
+13)    * CONTAINER WITH SHADOW *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              height: 180,
+              width: 250,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+                boxShadow: [
+                  BoxShadow(blurRadius: 15, offset: Offset(10.0, 10.0),color: Colors.black45),
+                ],
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+14) * MEDICINE WITH BOTTOM LEFT SLANT (OPTIONAL) *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent.shade200,
+          body: Column(children: [
+            Container(
+              margin:
+                  const EdgeInsets.only(left: 70.0, top: 250.0, right: 60.0),
+              height: 300,
+              width: 250,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow:  [
+                  BoxShadow(blurRadius: 3),
+                ],
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(210),
+                    bottomLeft: Radius.circular(60),
+                    bottomRight: Radius.circular(10)),
+              ),
+              child: Column(children: const [
+                SizedBox(
+                  height: 110,
+                ),
+                Text(
+                  'Medicine',
+                  style: TextStyle(fontSize: 30, color: Colors.lightBlueAccent),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'We asked several medical students why they choose to study medicine',
+                  style: TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center,
+                )
+              ]),
+            ),
+          ]),
+        ));
+  }
+}
+
+
+
+
+
+
+
+15)   * TABLET WITH ICON (OPTIONAL) *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 40,horizontal: 30),
+                height: 350,
+                width: 300,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 4,
+                        color: Colors.black38,
+                        offset: Offset(4.5, 4.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(210),
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(10)),
+                ),
+                child: Column(children: [
+                  const SizedBox(
+                    height: 90,
+                  ),
+                  const Text(
+                    'Medicine',
+                    style:
+                        TextStyle(fontSize: 30, color: Colors.lightBlueAccent),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Text(
+                    'We asked several medical students why they choose to study medicine',
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Container(
+                      height: 66,
+                      width: 65,
+                      decoration: BoxDecoration(
+                          color: Colors.cyan.shade400,
+                          borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(15.0))),
+                      child: const Align(
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.thumb_up,
+                            size: 35,
+                            color: Colors.white,
+                          )),
+                    ),
+                  )
+                ]),
+              ),
+              Positioned(
+                left: 35,
+                top: -4,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 110,
+                  width: 250,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+
+16)   * HOME IN CIRCLE *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: const Color(0xff64C8F2),
+          body: Center(
+            child: Container(
+              height: 300,
+              width: 280,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: const BorderRadius.all(Radius.circular(18)),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(35.0),
+                    child: const Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Flutter App',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlueAccent),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                       // color:const Color(0xff98AFBA),
+                        color: Colors.indigo,
+                        width: 1.0,
+                      ),
+                    ),
+                    child: const Padding(
+                        padding: EdgeInsets.all(1.0),
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage('assets/home_image.png'),
+                          radius: 150,
+                        )),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+      OR
+
+
+
+
+
+16)   * HOME IN CIRCLE *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.blue,
+          body: Center(
+            child: Container(
+              height: 280,
+              width: 280,
+              decoration: BoxDecoration(
+                color: Colors.white,
+               // border: Border.all(color: Colors.grey),
+                borderRadius: const BorderRadius.all(Radius.circular(18)),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(40.0),
+                    child: const Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Flutter App',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlueAccent),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 140,
+                    width: 150,
+                    child: CircleAvatar(
+                      backgroundColor: Color(0xff98AFBA),
+                      child: CircleAvatar(
+                        backgroundColor: Colors.grey,
+                        backgroundImage: AssetImage('assets/home_image.png'),
+                        radius: 69,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+17)* RIGHT SLANT CONTAINER WITH TABLET ICON *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                height: 350,
+                width: 300,
+                decoration: const BoxDecoration(
+                  color: Colors.lightBlueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 10,
+                        color: Colors.black38,
+                        offset: Offset(10.5, 10.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(250),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20)),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center, children: []),
+              ),
+              Positioned(
+                left: 60,
+                top: -1,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 120,
+                  width: 180,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+18)* RIGHT SLANT CONTAINER WITH TABLET AND TEXT *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                height: 350,
+                width: 300,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 10,
+                        color: Colors.black38,
+                        offset: Offset(10.5, 10.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(250),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20)),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Medicine',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlueAccent),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          child: Text(
+                            'We asked several medical students why they choose to study medicine',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ),
+                    ]),
+              ),
+              Positioned(
+                left: 60,
+                top: -1,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 120,
+                  width: 180,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+19)* RIGHT AND BOTTOM LEFT SLANT CONTAINER WITH TABLET *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                height: 350,
+                width: 300,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 10,
+                        color: Colors.black38,
+                        offset: Offset(10.5, 10.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(250),
+                      bottomLeft: Radius.circular(100),
+                      bottomRight: Radius.circular(20)),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Medicine',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlueAccent),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          child: Text(
+                            'We asked several medical students why they choose to study medicine',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ),
+                    ]),
+              ),
+              Positioned(
+                left: 60,
+                top: -1,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 120,
+                  width: 180,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+
+20)* RIGHT AND BOTTOM LEFT SLANT CONTAINER WITH TABLET AND THUMB-UP ICON*
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+                height: 350,
+                width: 280,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 4,
+                        color: Colors.black38,
+                        offset: Offset(4.5, 4.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(210),
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(10)),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 90,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Medicine',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlueAccent),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(10.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'We asked several medical students why they choose to study medicine',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Container(
+                          height: 56,
+                          width: 66,
+                          decoration: BoxDecoration(
+                              color: Colors.cyan.shade400,
+                              borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(15.0))),
+                          child: const Align(
+                              alignment: Alignment.center,
+                              child: Icon(
+                                Icons.thumb_up,
+                                size: 50,
+                                color: Colors.white,
+                              )),
+                        ),
+                      )
+                    ]),
+              ),
+              Positioned(
+                left: 35,
+                top: -3,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 110,
+                  width: 250,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+                OR
+
+
+
+
+20)* RIGHT AND BOTTOM LEFT SLANT CONTAINER WITH TABLET AND THUMB-UP ICON*
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+                height: 350,
+                width: 280,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 4,
+                        color: Colors.black38,
+                        offset: Offset(4.5, 4.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(250),
+                      bottomLeft: Radius.circular(100),
+                      bottomRight: Radius.circular(20)),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 90,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Medicine',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlueAccent),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(10.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'We asked several medical students why they choose to study medicine',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Container(
+                          height: 56,
+                          width: 66,
+                          decoration: BoxDecoration(
+                              color: Colors.cyan.shade400,
+                              borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(15.0))),
+                          child: const Align(
+                              alignment: Alignment.center,
+                              child: Icon(
+                                Icons.thumb_up,
+                                size: 50,
+                                color: Colors.white,
+                              )),
+                        ),
+                      )
+                    ]),
+              ),
+              Positioned(
+                left: 35,
+                top: -3,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 110,
+                  width: 250,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+      OR
+20)
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyappState();
+}
+
+class _MyappState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          body: Center(
+            child: Stack(children: <Widget>[
+              Container(
+                margin:
+                const EdgeInsets.symmetric(vertical: 40, horizontal: 30),
+                height: 350,
+                width: 280,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 4,
+                        color: Colors.black38,
+                        offset: Offset(4.5, 4.5)),
+                  ],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(210),
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(10)),
+                ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 70,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Medicine',
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlueAccent),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15.0),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'We asked several medical students why they choose to study medicine',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Container(
+                          height: 66,
+                          width: 63,
+                          decoration: BoxDecoration(
+                              color: Colors.cyan.shade400,
+                              borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(20.0),
+                              bottomRight: Radius.circular(10.0))),
+                          child: const Align(
+                              alignment: Alignment.center,
+                              child: Icon(
+                                Icons.thumb_up,
+                                size: 50,
+                                color: Colors.white,
+                              )),
+                        ),
+                      )
+                    ]),
+              ),
+              Positioned(
+                left: 35,
+                top: -3,
+                child: Image.asset(
+                  'assets/tablets_image.png',
+                  height: 110,
+                  width: 250,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ]),
+          ),
+        ));
+  }
+}
+
+
+
+
+
+
+         ROADMAP
+       ASSINGMENT-6
+12)bool isPrime(int n) {
+  if (n <= 1) {
+    return false;
+  }
+  {
+    if (n <= 3) {
+      return true;
+    }
+  }
+  if (n % 2 == 0 || n % 3 == 0) {
+    return false;
+  }
+  for (int i = 5; i * i <= n; i = i + 6) {
+    if (n % i == 0 || n % (i + 2) == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+int nextPrime(int N) {
+  if (N <= 1) {
+    return 2;
+  }
+  int prime = N;
+  bool found = false;
+  while (!found) {
+    prime++;
+    if (isPrime(prime)) {
+      found = true;
+    }
+  }
+  return prime;
+}
+
+void main() {
+  // ignore: unused_local_variable
+  int N = 3;
+  print(nextPrime(N));
+}
+
+
+
+
+
+
+
+
+
+
+13)import 'dart:io';
+
+void printPrimeNumbers(M, N) {
+  a:
+  for (var k = M; k <= N; ++k) {
+    for (var i = 2; i <= k / i; ++i) {
+      if (k % i == 0) {
+        continue a;
+      }
+    }
+    stdout.write(k);
+    stdout.write(' ');
+  }
+}
+
+void main() {
+  print('Enter M');
+  var M = int.parse(stdin.readLineSync()!);
+  print('Enter N');
+  var N = int.parse(stdin.readLineSync()!);
+  print('Prime Numbers in the Given Range');
+  printPrimeNumbers(M, N);
+}
+
+
+
+
+
+
+7)int fact(int n) {
+  if (n == 0) return 1;
+  int res = 1;
+  for (int i = 2; i <= n; i++) {
+    res = res * i;
+  }
+  return res;
+}
+
+void main() {
+  int n = 4, r = 2;
+  print(nCr(n, r));
+}
+
+double nCr(int n, int r) {
+  return fact(n) / (fact(r) * fact(n - r));
+}
+
+
+
+
+
+
+
+10)import 'dart:io';
+
+void main() {
+  int hcf = 1;
+
+  print("Enter first number");
+  var num1 = int.parse(stdin.readLineSync()!);
+
+  print("Enter second number");
+  var num2 = int.parse(stdin.readLineSync()!);
+
+  for (int i = 1; i <= num1 && i <= num2; ++i) {
+    if (num1 % i == 0 && num2 % i == 0) hcf = i;
+  }
+
+  print("$num1 and $num2 is $hcf");
+}
+
+
+
+
+
+
+9)void main() {
+  int a = 10, b = 25;
+  int lcm = getLCM(a, b);
+  print('LCM of $a and $b is $lcm');
+}
+
+int getLCM(int a, int b) {
+  return (a * b) ~/ gcd(a, b);
+}
+
+int gcd(int a, int b) {
+  return a.gcd(b);
+}
+
+
+
+
+
+
+8)int fact(int n) {
+  if (n == 0) return 1;
+  int res = 1;
+  for (int i = 2; i <= n; i++) {
+    res = res * i;
+  }
+  return res;
+}
+
+void main() {
+  int n = 4, r = 2;
+  print(nPr(n, r));
+}
+
+double nPr(int n, int r) {
+  return fact(n) / fact(n - r);
+}
+
+
+
+
+
+
+     ASSINGMENT-3
+9)
+import 'dart:io';
+
+void main() {
+  print('enter the x value:');
+  int x = int.parse(stdin.readLineSync()!);
+
+  print('enter the a value:');
+  int a = int.parse(stdin.readLineSync()!);
+
+  print('enter the b value:');
+  int b = int.parse(stdin.readLineSync()!);
+
+  print('enter the c value:');
+  int c = int.parse(stdin.readLineSync()!);
+
+  int eq = (a * (x * x)) + (b * x) + c;
+  if (eq == 0) {
+    print('Given equation is quadratic equation');
+  } else {
+    print('Given equation is not quadratic equation');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+        * VIEW *
+      * SCHEDULE *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          bottomNavigationBar: Row(children: [
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: Container(
+                height: 60,
+                width: 100,
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  color: Color(0xff32A887),
+                ),
+                child: const Text(
+                  'Create New Schedule',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 23,
+                  ),
+                ),
+              ),
+            ),
+          ]),
+          appBar: AppBar(
+            title: const Text(
+              "Schedule",
+              style: TextStyle(fontSize: 30, color: Colors.black),
+            ),
+            leading: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.arrow_back_ios_new),
+            ),
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+          ),
+          body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 30,
+                  width: 70,
+                  child: const Text("Date", style: TextStyle(fontSize: 30)),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                    ]),
+                Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  height: 40,
+                  width: 150,
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child:
+                      const Text("Schedules", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffa3949499),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.white))),
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black38, width: 1),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Color(0xff32A887)))),
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff32A887),
+                            borderRadius: BorderRadius.circular(6.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.white))),
+                    ])
+              ]),
+        ));
+  }
+}
+
+
+
+
+       OR
+
+
+
+
+        * VIEW *
+      * SCHEDULE *
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          bottomNavigationBar: Row(children: [
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: Container(
+                height: 60,
+                width: 100,
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  color: Color(0xff32A887),
+                ),
+                child: const Text(
+                  'Create New Schedule',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 23,
+                  ),
+                ),
+              ),
+            ),
+          ]),
+          appBar: AppBar(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              title: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Icon(
+                      Icons.arrow_back_ios_new,
+                      color: Colors.black,
+                      size: 25.0,
+                    ),
+                    Text(
+                      ' Schedule ',
+                      style: TextStyle(
+                          fontSize: 30.0, fontWeight: FontWeight.bold),
+                    ),
+                  ])),
+          body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 30,
+                  width: 70,
+                  child: const Text("Date", style: TextStyle(fontSize: 30)),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 64,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: const Color(0xffa3949499), width: 2),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Text(
+                              "6",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff32A887)),
+                            ),
+                            Text("Mon", style: TextStyle(fontSize: 20)),
+                          ],
+                        ),
+                      ),
+                    ]),
+                Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  height: 40,
+                  width: 150,
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: const Text("Schedules",
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffa3949499),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.white))),
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black38, width: 1),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Color(0xff32A887)))),
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff32A887),
+                            borderRadius: BorderRadius.circular(6.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.white))),
+                    ])
+              ]),
+        ));
+  }
+}
+
+
+
+
+       OR
+
+
+
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          bottomNavigationBar: Row(children: [
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: Container(
+                height: 60,
+                width: 100,
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  color: Color(0xff32A887),
+                ),
+                child: const Text(
+                  'Create New Schedule',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 23,
+                  ),
+                ),
+              ),
+            ),
+          ]),
+          appBar: AppBar(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              title: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Icon(
+                      Icons.arrow_back_ios_new,
+                      color: Colors.black,
+                      size: 25.0,
+                    ),
+                    Text(
+                      ' Schedule ',
+                      style: TextStyle(
+                          fontSize: 30.0, fontWeight: FontWeight.bold),
+                    ),
+                  ])),
+          body: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20.0),
+                  height: 30,
+                  width: 70,
+                  child: const Text("Date", style: TextStyle(fontSize: 30)),
+                ),
+                Row(children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 30),
+                    height: 64,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: const Color(0xffa3949499), width: 1),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: const [
+                        Text(
+                          "6",
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff32A887)),
+                        ),
+                        Text("Mon", style: TextStyle(fontSize: 20)),
+                      ],
+                    ),
+                  ),
+                ]),
+                Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  height: 40,
+                  width: 150,
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: const Text("Schedules",
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffa3949499),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.white))),
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black38, width: 1),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Color(0xff32A887)))),
+                      Container(
+                          margin: const EdgeInsets.all(15.0),
+                          height: 40,
+                          width: 100,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff32A887),
+                            borderRadius: BorderRadius.circular(6.0),
+                          ),
+                          child: const Text("12:00 PM",
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.white))),
+                    ])
+              ]),
+        ));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+        *** DIO API INTEGRATION ***
+
+
+import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("DIO"),
+          centerTitle: true,
+        ),
+        body: Center(
+            child: TextButton(
+                onPressed: () {
+                  clickhere();
+                },
+                child: const Text("click here",
+                    style: TextStyle(fontSize: 25, color: Colors.black)))),
+      ),
+    );
+  }
+}
+
+void clickhere() async {
+  var dio = Dio();
+
+  dio.get('https://jsonplaceholder.typicode.com/todos/1').then((response) {
+    print(response.statusCode);
+    print(response.data.toString());
+    if (response.statusCode == 200) {
+      // API request successful
+      final data = response.data;
+      // Do something with the data
+    } else {
+      // API request failed
+      throw Exception('Failed to load data');
+    }
+  }).catchError((e) {
+    // Handle error
+    print(e.toString());
+  });
+
+  // var response = await dio.get("https://jsonplaceholder.typicode.com/todos/1");
+  // print(response.statusCode);
+  // print(response.data.toString());
+}
+
+
+
+
+
+
+
+login User existences - provider
+Dynamic body
+DO’s and DON’TS IN FLUTTER
+provider or stacked are same are not which is better for flutter
+
+
+
+
+
+
+
+
+               ** ivin app editcontroller page **
+
+
+// import 'dart:convert';
+//
+// import 'package:get/get.dart';
+// import 'package:prasada_political_portfolio/app/data/models/response/generic_response.dart';
+// import 'package:http/http.dart' as http;
+// import '../../../data/models/response/GetAllPollingStationModel.dart';
+// import '../../../data/models/response/model.dart';
+// import '../../../data/network/api_service.dart';
+// import '../../../data/values/urls.dart';
+// import '../../../routes/app_routes.dart';
+//
+// class EditViewController extends GetxController {
+//   GenericResponse getmodel = GenericResponse();
+//   GetByState getmodel1 = GetByState();
+//   var currentIndex = 0.obs;
+//   RxInt IconColor = RxInt(0);
+//   RxInt indexvalue = RxInt(0);
+//   RxString pollingstationnumber = RxString('');
+//   RxString selected1 = RxString('');
+//   RxString selected2 = RxString('');
+//   RxString statevalue = RxString("");
+//   RxList<String> dropDownlocation = RxList();
+//   RxList<String> dropDownsectionnumberandname = RxList();
+//   RxString districtvalue = RxString("");
+//   List<String> statelist = RxList();
+//   List<String> locationlist = RxList();
+//   RxList<String> dropDown = RxList();
+//
+//   List<String> districtlist = RxList();
+//   RxList<String> dropDown3 = RxList();
+//
+//   void state(String value) {
+//     statevalue.value = value;
+//     print("--------------------------------  $statevalue");
+//   }
+//
+//   void district(String value) {
+//     districtvalue.value = value;
+//     print(districtvalue);
+//     print("--------------------------------  $districtvalue");
+//   }
+//
+//   void setSelected2(String value) {
+//     selected1.value = value;
+//   }
+//
+//   void setSelected3(String value) {
+//     selected2.value = value;
+//   }
+//
+//   @override
+//   void onInit() {
+//     GetAllPollingStationName(URLs.polling);
+//
+//     print('object');
+//     super.onInit();
+//   }
+//
+//   List pages = [Routes.CampaignView, Routes.edit];
+//
+//   Future GetAllPollingStationName(url) async {
+//     var client = http.Client();
+//     var respo = await client.get(Uri.parse(url),
+//         headers: {'accept': 'application/json', 'Authorization': token});
+//     print(respo.statusCode);
+//     print(URLs.pollingstationname);
+//     print(getmodel.result);
+//     print(jsonDecode(respo.body).runtimeType);
+//     // getmodel = GetAllPollingStationModel.fromJson(jsonDecode(respo.body));
+//     dropDown.value = getmodel1.result ?? [];
+//     // print(dropDownItes.value);
+//     return getmodel;
+//   }
+//
+//   Future GetByStateAPI(url) async {
+//     print("object-----------------------");
+//     print(statevalue);
+//     print(getmodel1.result);
+//     statelist = getmodel1.result ?? [];
+//   }
+//
+//   void setSelected1(String value) {
+//     pollingstationnumber.value = value;
+//   }
+//
+//   Future GetByDistrictAPI(url) async {
+//     print(districtvalue);
+//
+//     print(getmodel1.result);
+//     districtlist = getmodel1.result ?? [];
+//   }
+//
+//   Future GetByPollingStationNumberAPI(url) async {
+//     var respo = await ApiService()
+//         .GetApi(x: GetByState, url: URLs.pollingstationnumber);
+//     getmodel1 = GetByState.fromJson(jsonDecode(respo));
+//     dropDownlocation.value = getmodel1.result ?? [];
+//     print(dropDown3.value);
+//     return getmodel;
+//   }
+//
+//   Future GetByPollingStationLocationAPI(url) async {
+//     print(getmodel1.result);
+//     locationlist = getmodel1.result ?? [];
+//   }
+//
+//   void changePage(int index) {
+//     currentIndex.value = index;
+//     IconColor = RxInt(index);
+//
+//     Get.toNamed(pages[index]);
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      * edit screen *
+
+
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+// import 'package:prasada_political_portfolio/app/modules/searchscreen/views/searchscreen.dart';
+// import 'package:prasada_political_portfolio/widgets/custom_widgets.dart';
+//
+// import '../../../data/values/dimens.dart';
+// import '../../../data/values/urls.dart';
+// import '../../../themes/app_colors.dart';
+// import '../../../themes/app_styles.dart';
+// import '../../searchscreen/controllers/searchscreencontroller.dart';
+// import '../../voterdetails/controller/votercontroller.dart';
+// import '../../voterdetails/voterdetailsview/voterdetailsview.dart';
+//
+// class Screen_edit extends StatelessWidget {
+//   Screen_edit({Key? key}) : super(key: key);
+//   // VoterDetailsController controller2 = VoterDetailsController();
+//   SecondScreenController controller = Get.put(SecondScreenController());
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Expanded(
+//         child: ListView(
+//       children: [
+//         Padding(
+//             padding: EdgeInsets.all(20.0),
+//             child: Column(
+//               children: [
+//                 CommonEditFeild(
+//                   text: "Voter Id",
+//                   Value: result_data[cardid].voterId.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "FirstName",
+//                   Value: result_data[cardid].firstName.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Guardian",
+//                   Value: result_data[cardid].guardian.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "House Number",
+//                   Value: result_data[cardid].home.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Age",
+//                   Value: result_data[cardid].age.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Gender",
+//                   Value: result_data[cardid].gender.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "State",
+//                   Value: result_data[cardid].state.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "District",
+//                   Value: result_data[cardid].district.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Constituency",
+//                   Value: result_data[cardid].constituency.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Polling Station Number",
+//                   Value: result_data[cardid].pollingStationNumber.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Polling Station Name",
+//                   Value: result_data[cardid].pollingStationName.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Polling Station Location",
+//                   Value: result_data[cardid].pollingStationLocation.toString(),
+//                 ),
+//                 CommonEditFeild(
+//                   text: "Section Number And Name",
+//                   Value: result_data[cardid].sectionNoAndName.toString(),
+//                 ),
+//                 Padding(
+//                     padding: EdgeInsets.only(
+//                         top: 20.0, left: 50.0, right: 50.0, bottom: 20.0),
+//                     child: CustomButton(buttonName: "Update", onTap: () {})),
+//                 Padding(
+//                     padding: EdgeInsets.only(
+//                         top: 20.0, left: 50.0, right: 50.0, bottom: 20.0),
+//                     child: Container(
+//                       height: 40,
+//                       decoration: BoxDecoration(
+//                           color: Colors.white,
+//                           border: Border.all(color: AppColors.secondaryColor),
+//                           borderRadius: BorderRadius.circular(30.0)),
+//                       child: Row(
+//                         mainAxisAlignment: MainAxisAlignment.center,
+//                         children: [
+//                           Text(
+//                             "Cancel",
+//                             style: AppStyles.tsSecondaryRegular14,
+//                           )
+//                         ],
+//                       ),
+//                     ))
+//               ],
+//             ))
+//       ],
+//     ));
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

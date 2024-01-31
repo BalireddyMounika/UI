@@ -1,0 +1,540 @@
+ int currentStep = int.tryParse(_imageUploadController.aboutYou.value) ?? 0;
+                      int nextStep = currentStep + 1;
+                      if (nextStep <= 4) {
+                        _imageUploadController.onChangeValue(nextStep.toString());
+                        switch (nextStep) {
+                          case 1:
+                            Get.to(ProfileCandidateInfo(), arguments: controller);
+                            break;
+                          case 2:
+                            Get.to(PoliticalHistory(), arguments: controller);
+                            break;
+                          case 3:
+                            Get.to(ProfileSocialMedia(), arguments: controller);
+                            break;
+                          case 4:
+                            Get.to(Profile_EC_status(), arguments: controller);
+                            break;
+                        }
+                      } else {}
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+// import 'package:nivish/app/modules/home/controllers/home_controller.dart';
+//
+// import '../../app/data/values/dimens.dart';
+// import '../../app/routes/app_routes.dart';
+//
+// class CustomStepper extends StatelessWidget {
+//   HomeController controller = Get.put(HomeController());
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     int currentStep = int.tryParse(controller.height.value) ?? 0;
+//
+//     return Column(
+//       children: [
+//         ConstrainedBox(
+//           constraints: BoxConstraints.tightFor(height: Dimens.gapX10),
+//           child: Stepper(
+//             type: StepperType.horizontal,
+//             currentStep: currentStep,
+//             steps: [
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 0,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 1,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 2,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 3,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 4,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 5,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 6,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 7,
+//                 content: SizedBox(),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
+// import 'package:nivish/app/modules/home/controllers/home_controller.dart';
+//
+// import '../../app/data/values/dimens.dart';
+// import '../../app/routes/app_routes.dart';
+//
+// class CustomStepper extends StatelessWidget {
+//   HomeController controller = Get.put(HomeController());
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     int currentStep = int.tryParse(controller.height.value) ?? 0;
+//
+//     return Column(
+//       children: [
+//         ConstrainedBox(
+//           constraints: BoxConstraints.tightFor(height: Dimens.gapX10),
+//           child: Stepper(
+//             type: StepperType.horizontal,
+//             currentStep: currentStep,
+//             onStepTapped: (index) {
+//               controller.onChangeStepperValue(index.toString());
+//               switch (index) {
+//                 case 0:
+//                   Get.toNamed(Routes.HOME, arguments: controller);
+//                   break;
+//                 case 1:
+//                   Get.toNamed(Routes.StationAWeight, arguments: controller);
+//                   break;
+//                 case 2:
+//                   Get.toNamed(Routes.StationATricepsSkinFold,
+//                       arguments: controller);
+//                   break;
+//                 case 3:
+//                   Get.toNamed(Routes.StationASubScapulaSkinFold,
+//                       arguments: controller);
+//                   break;
+//                 case 4:
+//                   Get.toNamed(Routes.StationAArm, arguments: controller);
+//                   break;
+//                 case 5:
+//                   Get.toNamed(Routes.StationAHead, arguments: controller);
+//                   break;
+//                 case 6:
+//                   Get.toNamed(Routes.StationAAbdominalGirth,
+//                       arguments: controller);
+//                   break;
+//                   case 7:
+//                   Get.toNamed(Routes.StationABmi,
+//                       arguments: controller);
+//                   break;
+//               }
+//               return;
+//             },
+//             steps: [
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 0,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 1,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 2,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 3,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 4,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 5,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 6,
+//                 content: SizedBox(),
+//               ),
+//               Step(
+//                 title: Text(''),
+//                 isActive: currentStep >= 7,
+//                 content: SizedBox(),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nivish/app/modules/home/controllers/home_controller.dart';
+
+import '../app/data/values/dimens.dart';
+import '../app/themes/app_colors.dart';
+
+// Define your list of step names
+List<String> stepNames = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  // Add more step names as needed
+];
+
+class CustomStepper extends StatelessWidget {
+  final int currentStep;
+  final Function(int) onStepChanged;
+
+  CustomStepper({
+    required this.currentStep,
+    required this.onStepChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: List.generate(
+        stepNames.length,
+            (index) {
+          bool isCompleted = currentStep > index;
+          return GestureDetector(
+            onTap: () {
+              onStepChanged(index);
+            },
+            child: Column(
+              children: [
+                Container(
+                  width: Dimens.screenWidthX30,
+                  height: Dimens.screenHeightX30,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isCompleted ? AppColors.brownColor : AppColors.greyColor,
+                  ),
+                ),
+                if (index < stepNames.length - 1)
+                  Container(
+                    width: Dimens.screenWidthX30,
+                    height: Dimens.screenHeightX40,
+                    color: isCompleted ? AppColors.brownColor : AppColors.greyColor,
+                  ),
+                Text(
+                  stepNames[index],
+                  style: TextStyle(
+                    color: isCompleted ? AppColors.brownColor : AppColors.greyColor,
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/material.dart';
+//
+// void main() {
+//   runApp(MaterialApp(
+//     home: ProgressStepperPage(),
+//   ));
+// }
+//
+// class ProgressStepperPage extends StatefulWidget {
+//   @override
+//   _ProgressStepperPageState createState() => _ProgressStepperPageState();
+// }
+//
+// class _ProgressStepperPageState extends State<ProgressStepperPage> {
+//   int currentStep = 0;
+//   final int totalSteps = 3;
+//
+//   void goToPreviousStep() {
+//     if (currentStep > 0) {
+//       setState(() {
+//         currentStep--;
+//       });
+//     }
+//   }
+//
+//   void goToNextStep() {
+//     if (currentStep < totalSteps - 1) {
+//       setState(() {
+//         currentStep++;
+//       });
+//     }
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Progress Stepper with Chevron and Arrows'),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.center,
+//               children: [
+//                 if (currentStep > 0)
+//                   IconButton(
+//                     icon: Icon(Icons.arrow_left),
+//                     onPressed: goToPreviousStep,
+//                   ),
+//                 for (int i = 0; i < totalSteps; i++)
+//                   _StepIndicator(
+//                     isCurrentStep: i == currentStep,
+//                   ),
+//                 if (currentStep < totalSteps - 1)
+//                   IconButton(
+//                     icon: Icon(Icons.arrow_right),
+//                     onPressed: goToNextStep,
+//                   ),
+//               ],
+//             ),
+//             SizedBox(height: 16),
+//             Text(
+//               'Step ${currentStep + 1} of $totalSteps',
+//               style: TextStyle(fontSize: 16),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
+// class _StepIndicator extends StatelessWidget {
+//   final bool isCurrentStep;
+//
+//   _StepIndicator({required this.isCurrentStep});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       margin: EdgeInsets.symmetric(horizontal: 10),
+//       width: 40,
+//       height: 40,
+//       child: Stack(
+//         children: [
+//           CustomPaint(
+//             size: Size(40, 40),
+//             painter: _ChevronPainter(isCurrentStep),
+//           ),
+//           Center(
+//             child: Text(
+//               '${isCurrentStep ? '' : (1 + _ProgressStepperPageState().currentStep)}',
+//               style: TextStyle(
+//                 color: Colors.white,
+//                 fontSize: 18,
+//               ),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+//
+// class _ChevronPainter extends CustomPainter {
+//   final bool isCurrentStep;
+//
+//   _ChevronPainter(this.isCurrentStep);
+//
+//   @override
+//   void paint(Canvas canvas, Size size) {
+//     final Paint paint = Paint()
+//       ..color = isCurrentStep ? Colors.orangeAccent : Colors.grey
+//       ..style = PaintingStyle.fill;
+//
+//     final Path path = Path()
+//       ..moveTo(size.width / 2, 0)
+//       ..lineTo(size.width, size.height / 2)
+//       ..lineTo(size.width / 2, size.height)
+//       ..lineTo(0, size.height / 2)
+//       ..close();
+//
+//     canvas.drawPath(path, paint);
+//   }
+//
+//   @override
+//   bool shouldRepaint(covariant CustomPainter oldDelegate) {
+//     return false;
+//   }
+// }
+
+
+
+
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart'; // Add this import
+// import 'package:clippy_flutter/clippy_flutter.dart';
+// import 'package:step_progress_indicator/step_progress_indicator.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//         visualDensity: VisualDensity.adaptivePlatformDensity,
+//       ),
+//       home: MyHomePage(title: 'Flutter Demo Home Page'),
+//     );
+//   }
+// }
+//
+// class MyHomePage extends StatelessWidget {
+//   final String title;
+//
+//   MyHomePage({required this.title});
+//
+//   final _counter = 0.obs; // Create an observable variable
+//
+//   void incrementCounter() {
+//     _counter.value++; // Update the counter using GetX's .value property
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(title),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             StepProgressIndicator(
+//               totalSteps: 3,
+//               currentStep: 2,
+//               size: 20,
+//               selectedColor: Colors.orangeAccent,
+//               unselectedColor: Colors.grey,
+//               customStep: (index, color, _) => index == 0
+//                   ? Point(
+//                 triangleHeight: 20.0,
+//                 edge: Edge.RIGHT,
+//                 child: Container(
+//                   color: color,
+//                   child: Center(child: Text('')),
+//                 ),
+//               )
+//                   : Chevron(
+//                 triangleHeight: 20.0,
+//                 edge: Edge.RIGHT,
+//                 child: Container(
+//                   color: color,
+//                   child: Center(child: Text('')),
+//                 ),
+//               ),
+//             ),
+//             Obx(() => Text(
+//               '$_counter',
+//               style: TextStyle(fontSize: 24),
+//             )),
+//           ],
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: incrementCounter, // Call the incrementCounter method
+//         tooltip: 'Increment',
+//         child: Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

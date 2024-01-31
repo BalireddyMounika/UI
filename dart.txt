@@ -1,0 +1,129 @@
+      1)function with parameter and return-
+void main() {  
+int sum(int a, int b){  
+int result;
+result = a+b;  
+return result;  
+}  
+var c = sum(30,20);  
+print("The sum of two numbers is: ${c}");  
+}  
+
+      2)function with no parameter and with return-
+void main(){  
+String greetings(){  
+return "Welcome to JavaTpoint";  
+}  
+print(greetings());  
+}
+
+      3)function with no parameter and no return-
+void greetings()  
+{  
+print("Welcome to JavaTpoint");  
+}  
+void main() {  
+print("The example of Dart Function");  
+greetings();  
+}  
+
+      4)function with parameter and no return-
+void main()   
+{  
+void number(int n){  
+if (n%2 ==0){  
+print("The given number is even");  
+}  
+else {  
+print("The given number is odd");  
+} 
+}  
+number(20);  
+}  
+ 
+       5)nested if else-
+void main() {  
+var a = 10;  
+var b = 20;  
+var c = 30;  
+if (a>b){  
+if(a>c){  
+print("a is greater");  
+}  
+else{  
+print("c is greater");  
+}
+}  
+else if (b>c){  
+print("b is greater");  
+}  
+else {  
+print("c is greater");  
+}  
+}  
+
+
+        6)operators
+void main(){  
+  print("Example of Assignment operators");  
+  var n1 = 10;  
+  var n2 = 5;  
+  print("n1+n2 = ${n1+n2}");  
+  print("n1-n2 = ${n1-n2}");  
+  print("n1*n2 = ${n1*n2}");  
+  print("n1/=n2 = ${n1/n2}");   
+  print("n1%n2 = ${n1%n2}");     
+} 
+
+
+         7)Example of Bitwise operators
+  void main(){  
+  print("Example of Bitwise operators");  
+  var a  = 25;  
+  var b = 20;  
+  print("a & b = ${a&b}"); 
+  print("a | b = ${a|b}");  
+  }  
+
+          8)range() function
+void main()
+ {
+  List colors = ['blue', 'black', 'green', 'white', 'orange', 'pink'];
+  var myRange = colors.getRange(1, 4).toList();
+  print(myRange);
+ }      
+
+          9)boolean (even is true and odd is false)
+void main(){
+ int a = 2;
+ bool iseven = true;
+ bool isodd = false;
+ if(a%2 == 0){
+print("a is even");
+  }
+    else{
+    print("a is odd");
+  }
+}     
+
+
+                    "link-https://www.javatpoint.com/dart-for-in-loop"
+
+              10)if
+void main(){
+ int a = 5;
+ int b = 3;
+  if (a>b);
+  print("a greater than b");
+}
+
+               11)if else
+void main(){
+ int a = 5;
+ int b = 3;
+  if(a < b) {
+  print("a less than b");
+  }   else  {
+  print("a greater than b");
+  };
+}

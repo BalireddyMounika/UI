@@ -1,0 +1,14 @@
+
+       22/11/23
+
+- tick marks after completion stations and disable also
+- distance should be decrease in left and right eye at visually challenged in C
+- yes no switch button at color blindness in C
+- names of stations
+- validations at B, H in 1st screen
+- images only 1 at each screen (in H)
+- Anthroprometrics spelling at appbar and UIN number in main page
+ (it should be changed at dashboardscreen and controller)
+- remove logout and only power button is enough
+- in station E at slider images also need to be implement
+ 
